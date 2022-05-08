@@ -36,7 +36,7 @@ Projeto desenvolvido para a disciplina de Banco de Dados 2. O projeto consiste e
       "DefaultConnection": "Data Source=<seu_server>;Initial Catalog=Northwind;Integrated Security=True"
     },
   ```
-* Procure pelo ícone do play verde e clique nele, assim será possivel executar o projeto 
+  * Procure pelo ícone do play verde e clique nele, assim será possivel executar o projeto 
 
 ## Desenvolvedores
 
