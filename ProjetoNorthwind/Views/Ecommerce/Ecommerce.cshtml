@@ -1,0 +1,38 @@
+﻿@model ProjetoNorthwind.Models.DropdownList
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        Vinculando DropdownList com SQL Server
+    </title>
+</head>
+<body>
+    Clientes
+
+    <form action="/Ecommerce/step_1" method="POST">
+
+        <h2>Clientes: </h2>
+        <select class="form-control" name="client" id="Select1">
+            @foreach (var item in Model.Customers)
+            {
+                <option value="@item.CustomerID" selected="selected"> @item.ContactName </option>
+            }
+        </select>
+        <br />
+        <h2>Funcionários: </h2>
+        <select class="form-control" name="employee" id="Select2">
+            @foreach (var item in Model.Employees)
+            {
+                <option value="@item.EmployeeID" selected="selected"> @item.FirstName</option>
+            }
+        </select>
+        <br />
+        <button type="submit">Prosseguir</button>
+    </form>
+</body>
+</html>

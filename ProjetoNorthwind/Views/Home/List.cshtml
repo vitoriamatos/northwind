@@ -1,0 +1,48 @@
+﻿@model ProjetoNorthwind.Models.DropdownList
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        Vinculando DropdownList com SQL Server
+    </title>
+</head>
+<body>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Vizualizar
+            </th>
+        </tr>
+        @foreach (var item in Model.Customers)
+        {
+    <tr>
+
+        <td>
+            @item.CustomerID.ToString()
+        </td>
+        <td>
+            @item.ContactName.ToString()
+        </td>
+
+        <td>
+
+         <form action="../Client/Client_Detail" method="POST">
+          <input hidden  name="id" value="@item.CustomerID.ToString()"></input>
+          <button type="submit" >Detalhes </button>
+          </form>
+        </td>
+    </tr>
+
+        }
+    </table>
+    
+</body >
+</html >

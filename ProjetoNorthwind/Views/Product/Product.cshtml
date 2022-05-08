@@ -1,0 +1,38 @@
+﻿@model ProjetoNorthwind.Models.DropdownList
+
+@{
+    ViewData["Title"] = "Client";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+       Client Page
+    </title>
+</head>
+<body>
+    <table class="table table-bordered">
+        <tr>
+            <th>
+                Nome
+            </th>
+            <th>
+                Preços
+            </th>
+        </tr>
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+
+                <td>
+                    @item.ProductName
+                </td>
+                <td>
+                    @item.UnitPrice
+                </td>
+           </tr>
+        }
+    </table>
+</body>
+</html>

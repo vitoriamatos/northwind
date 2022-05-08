@@ -1,0 +1,42 @@
+﻿@model ProjetoNorthwind.Models.Ecommerce
+
+
+<div>
+    <h4>Cliente: </h4>
+        <h5>ID: @Model.Customer.CustomerID</h5>
+        <p id="NomeCliente">@Model.Customer.ContactName</p>
+    <h4>Funcionario: </h4> 
+        <h5>ID: @Model.Employee.EmployeeID</h5>
+        <p id="NomeFuncionario">@Model.Employee.FirstName</p>
+</div>
+
+
+<table class="table">
+    <tr>
+        <th>Escolha</th>
+        <th>ProductID</th>
+        <th>ProductName</th>
+        <th>QuantityPerUnit</th>
+        <th>UnitPrice</th>
+
+    </tr>
+
+
+    @foreach (var item in Model.ProductsEcommerceList)
+    {
+        <tr>
+            <th>@Html.ActionLink("Quero", "AddPedido", 
+                new { idCliente = @Model.Customer.CustomerID, idFunc = @Model.Employee.EmployeeID, idProduto = @item.ProductID})</th>
+
+            <th>@(item.ProductID)</th>
+            <th>@(item.ProductName)</th>
+            <th>@(item.QuantityPerUnit)</th>
+            <th>@(item.UnitPrice)</th>
+
+            
+        </tr>
+
+    }
+
+</table>   
+   

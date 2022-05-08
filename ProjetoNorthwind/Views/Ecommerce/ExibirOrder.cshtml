@@ -1,0 +1,54 @@
+﻿@model ProjetoNorthwind.Models.OrderViewModel
+
+<h1>Orders</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.order.OrderID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.order.CustomerID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.order.EmployeeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.order.ShipName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.order.ShipAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.order.ShipCity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.orderlist) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShipCity)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
