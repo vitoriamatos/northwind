@@ -18,7 +18,7 @@ Projeto desenvolvido para a disciplina de Banco de Dados 2. O projeto consiste e
 ## Instalação
 
 * Configurando o banco:
-  * No diretório do projeto existe o `script.sql`, nele está o banco de dados com a procedure e especificações necessárias para rodar aplicação
+  * No diretório do projeto existe o arquivo `northwindSQL.sql`, nele está o banco de dados com a procedure e especificações necessárias para rodar aplicação
   * Você deve configurar o script no seu Microsoft SQL Management Studio 
 
 * Configurando a aplicação: 
